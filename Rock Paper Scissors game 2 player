@@ -1,0 +1,41 @@
+print("Welcome to my Rock Paper Scissors game")
+
+def print_rules():
+    print("""
+The rules for the game are as follows:
+Rock beats scissors
+Paper beats rock
+Scissors beats paper
+If you both have the same choice it will be a draw
+When each player is making their choice the other player must look away
+""")
+
+
+print_rules()
+play_game = input("Do you wish to play? ")
+player_1 = input("Please enter the name for player 1 ")
+player_2 = input("Please enter the name for player 2 ")
+
+while play_game.lower() == "yes": 
+    
+    rock = "rock"
+    paper = "paper"
+    scissors = "scissors"
+    
+    rock > scissors
+    paper > rock
+    scissors > paper
+    
+    p1_choice = input("\nPlayer 1, please choose either 'rock', 'paper' or 'scissors' ")
+    p2_choice = input("\nPlayer 2, please choose either 'rock', 'paper' or 'scissors' ")
+    
+    if p1_choice < p2_choice:
+        print("{} wins".format(player_1))
+    elif p2_choice < p1_choice:
+        print("{} wins".format(player_2))
+    elif p1_choice == p2_choice:
+        print("DRAW!!")
+        
+    play_game = input("Do you wish to play again ")
+
+print("Thanks for playing")
